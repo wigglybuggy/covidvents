@@ -1,12 +1,11 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>How many patients will need ventilators tomorrow?</title>
-    <script>
-        var on_vent, arrivals;
-        var outputText;
+  <meta charset="UTF-8">
+  <title> Ventilator Prediction </title>
+  <script>
+    var on_vent; 
+    var arrivals;
+    var outputText;
         
         function validate() {
         
@@ -25,15 +24,14 @@
                 outputText = "<em>number of patients</em> must be a number!";
             } else {
                 // calculate the result using x = (-b +- sqrt(b^2 - 4ac)) / 2a
-				var los1 = 10
-				var los2 = 5
-				var los3 = 5
-				var p1 = 0.7
-				var p2 = 0.06
-				var p3 = 0.24
-				var los_av = p1*los1+p2*los2+p3*los3;
+                var los1 = 10;
+                var los2 = 5;
+                var los3 = 5;
+                var p1 = 0.7;
+                var p2 = 0.06;
+                var p3 = 0.24;
+                var los_av = p1*los1+p2*los2+p3*los3;
                 var ans = Math.trunc((p2+p3)/los_av*on_vent + (p2/los2+p3/los3)*arrivals);
-               
                 outputText = "Expected number of new ventilators: <strong>" + ans;
             }
             
@@ -41,20 +39,48 @@
             document.getElementById("output_text").innerHTML = outputText;
         }
     </script>
+  
 </head>
-
-<body>
-    
+  
+  <body style="background-color:pink;">
+	  
+	  <h2 style="text-align:left;font-family:Arial;"> Why do ventilators matter? </h2>
+	  <pre> INSERT ANSWER</pre>
+	  <hr>
+	  
+	  <h2 style="text-align:left;font-family:Arial;"> Model Overview </h2>
+	  <pre> INSERT ANSWER</pre>
+	  <img src="sim_v_nyc.jpg"; style="width:600px"; alt="simulation results v nyc data">
+	  <hr>
+	  
+	  <h2 style="text-align:left;font-family:Arial;"> Our Assumptions</h2>
+	  <pre> INSERT ANSWER</pre>
+	  <hr>
+	  
+    <h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
     <form name="input_form" action="javascript:validate();">
         Number in hospital not on ventilators: <input type="text" name="aterm" size="5" required>
 		<br><br>
         Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
-        <br><br>
+    <br><br>
         <input type="submit" value="Calculate">
     </form>
     
     <p id="output_text"/>
-
-</body>
-
+    <hr>
+	  	   
+	  <h2 style="text-align:left;font-family:Arial;"> How to Interpret the Results </h2>
+	  <pre> INSERT ANSWER</pre>
+	  <hr>
+	  
+	  <h2 style="text-align:left;font-family:Arial;"> How to Use the Results </h2>
+	  <pre> INSERT ANSWER</pre>
+	  <hr>
+	  
+	  <h2 style="text-align:left;font-family:Arial;"> Additional Resources </h2>
+	  <pre> INSERT pdf of paper, etc. </pre>
+	  <hr>
+	
+  </body>
+  
 </html>
