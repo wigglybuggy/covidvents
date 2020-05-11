@@ -6,18 +6,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	
   <script>
     var on_vent; 
     var arrivals;
     var outputText;
-        
         function validate() {
-        
             // get the input
             on_vent = document.forms["input_form"]["aterm"].value;
             arrivals = document.forms["input_form"]["bterm"].value;
-            
             // validate a, b and c
             if (on_vent < 0) {
                 outputText = "<em>number of patients</em> cannot be less then zero!";
@@ -39,45 +35,29 @@
                 var ans = Math.trunc((p2+p3)/los_av*on_vent + (p2/los2+p3/los3)*arrivals);
                 outputText = "Expected number of new ventilators: <strong>" + ans;
             }
-            
             // output the result (or errors)
             document.getElementById("output_text").innerHTML = outputText;
         }
-    </script>	
+   </script>	
 </head>
-  
-  <body style="background-color:white;"> 
-	  
-	<div class="container">
-  	<h2>Dynamic Tabs</h2>
+	
+<body style="background-color:white;"> 
+   <img src="Cornell_ORIE.gif"; style="width:300px"; alt="Cornell ORIE Logo">
+   <div class="container">
  	<ul class="nav nav-tabs">
     	<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-    	<li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-    	<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-   	<li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+    	<li><a data-toggle="tab" href="#modeloverview">Model Overview</a></li>
+    	<li><a data-toggle="tab" href="#about">About</a></li>
+   	<li><a data-toggle="tab" href="#contact">Contact</a></li>
   	</ul>  
 		
-	<div class="tab-content">
-    		<div id="home" class="tab-pane fade in active">
-      		<h3>HOME</h3>
-      		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    		</div>
-    	<div id="menu1" class="tab-pane fade">
-      		<h3>Menu 1</h3>
-      		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    	</div>
-    	<div id="menu2" class="tab-pane fade">
-      	<h3>Menu 2</h3>
-      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    	</div>
-    	<div id="menu3" class="tab-pane fade">
-      	<h3>Menu 3</h3>
-      	<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    	</div>
-  	</div>
-	</div>
-	  
-	<img src="Cornell_ORIE.gif"; style="width:300px"; alt="Cornell ORIE Logo">
+   <div class="tab-content">
+    	<div id="home" class="tab-pane fade in active"> </div>
+	<div id="modeloverview" class="tab-pane fade"> </div>
+    	<div id="about" class="tab-pane fade"> </div>
+    	<div id="contact" class="tab-pane fade"> </div>
+   </div>
+   </div>
 	  
 	<h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
     	<form name="input_form" action="javascript:validate();">
