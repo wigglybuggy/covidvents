@@ -83,6 +83,17 @@ body {
 	<a href="#contact">Contact Us</a>
 	</div>
 	  
+	<h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
+    	<form name="input_form" action="javascript:validate();">
+        Number in hospital not on ventilators: <input type="text" name="aterm" size="5" required>
+	<br><br>
+        Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
+   	 <br><br>
+        <input type="submit" value="Calculate">
+   	 </form>
+    
+    <p id="output_text"/>
+    <hr>
 	  <h2 style="text-align:left;font-family:Arial;"> Why do ventilators matter? </h2>
 	  <pre> INSERT ANSWER</pre>
 	  <hr>
@@ -95,18 +106,6 @@ body {
 	  <h2 style="text-align:left;font-family:Arial;"> Our Assumptions</h2>
 	  <pre> INSERT ANSWER</pre>
 	  <hr>
-	  
-    <h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
-    <form name="input_form" action="javascript:validate();">
-        Number in hospital not on ventilators: <input type="text" name="aterm" size="5" required>
-		<br><br>
-        Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
-    <br><br>
-        <input type="submit" value="Calculate">
-    </form>
-    
-    <p id="output_text"/>
-    <hr>
 	  	   
 	  <h2 style="text-align:left;font-family:Arial;"> How to Interpret the Results </h2>
 	  <pre> INSERT ANSWER</pre>
