@@ -53,47 +53,35 @@
 		
    <div class="tab-content">
     	<div id="home" class="tab-pane fade in active"> </div>
+	   <h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
+    	   <form name="input_form" action="javascript:validate();">
+           Number in hospital not on ventilators: <input type="text" name="aterm" size="5" required>
+	   <br><br>
+           Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
+   	   <br><br>
+           <input type="submit" value="Calculate">
+   	   </form>
+   	   <p id="output_text"/>
+	   
 	<div id="modeloverview" class="tab-pane fade"> </div>
+	   <h2 style="text-align:left;font-family:Arial;"> Our Assumptions</h2>
+	   <pre> INSERT ANSWER</pre>
+	   
+	   <h2 style="text-align:left;font-family:Arial;"> How to Use the Results </h2>
+	  <pre> INSERT ANSWER</pre>
+	   
+	   <img src="sim_v_nyc.jpg"; style="width:600px"; alt="simulation results v nyc data">
+	   
     	<div id="about" class="tab-pane fade"> </div>
+	   <h2 style="text-align:left;font-family:Arial;"> Why do ventilators matter? </h2>
+	   <pre> INSERT ANSWER</pre>
+	   
+	    <h2 style="text-align:left;font-family:Arial;"> Additional Resources </h2>
+	    <pre> INSERT pdf of paper, etc. </pre>
+	   
     	<div id="contact" class="tab-pane fade"> </div>
+	   
    </div>
    </div>
-	  
-	<h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
-    	<form name="input_form" action="javascript:validate();">
-        Number in hospital not on ventilators: <input type="text" name="aterm" size="5" required>
-	<br><br>
-        Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
-   	 <br><br>
-        <input type="submit" value="Calculate">
-   	 </form>
-   	<p id="output_text"/>
-   	 <hr>
-	  
-	  <h2 style="text-align:left;font-family:Arial;"> Why do ventilators matter? </h2>
-	  <pre> INSERT ANSWER</pre>
-	  <hr>
-	  
-	  <h2 style="text-align:left;font-family:Arial;"> Model Overview </h2>
-	  <pre> INSERT ANSWER</pre>
-	  <img src="sim_v_nyc.jpg"; style="width:600px"; alt="simulation results v nyc data">
-	  <hr>
-	  
-	  <h2 style="text-align:left;font-family:Arial;"> Our Assumptions</h2>
-	  <pre> INSERT ANSWER</pre>
-	  <hr>
-	  	   
-	  <h2 style="text-align:left;font-family:Arial;"> How to Interpret the Results </h2>
-	  <pre> INSERT ANSWER</pre>
-	  <hr>
-	  
-	  <h2 style="text-align:left;font-family:Arial;"> How to Use the Results </h2>
-	  <pre> INSERT ANSWER</pre>
-	  <hr>
-	  
-	  <h2 style="text-align:left;font-family:Arial;"> Additional Resources </h2>
-	  <pre> INSERT pdf of paper, etc. </pre>
-	  <hr>	  
-
   </body>
 </html>
