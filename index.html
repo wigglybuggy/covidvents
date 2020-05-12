@@ -52,16 +52,18 @@
 		
    <div class="tab-content">
     	<div id="home" class="tab-pane fade in active"> 
-	   <h1 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h1>	  
+	   <h2 style="text-align:center;font-family:Arial;"> How many ventilators will be needed tomorrow? </h2>	  
     	   <form name="input_form" action="javascript:validate();">
-           Number in hospital not on ventilators: <input type="text" name="aterm" size="5" required>
+           Number of patients in the hospital not on ventilators: <input type="text" name="aterm" size="5" required>
 	   <br><br>
            Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
    	   <br><br>
            <input type="submit" value="Calculate">
    	   </form>
-   	   <p id="output_text"/>
+   	   <p id="output_text"/>	
 	</div>
+	   
+	<p id="modeloverview">pls take me overview</p>
 	   
 	<div id="modeloverview" class="tab-pane fade"> 
 	   <h2 style="text-align:left;font-family:Arial;"> Why do ventilators matter? </h2>
