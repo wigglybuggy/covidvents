@@ -63,48 +63,51 @@
    	   <p id="output_text"/>
 		
 	<embed src="https://new-admission-prediction.shinyapps.io/new_admission/" style="width:800px; height: 500px;">	
-	
 		
 	</div>
 	   
 	<div id="modeloverview"; class="tab-pane fade"> 
 		
-	   <h2 style="text-align:left;font-family:Arial;"> Ventilators Shortage</h2>
-	   <pre>Mechanical ventilation is a vital component of the medical support for patients with severe acute respiratory failure caused by COVID-19. 
-Many U.S. and other countries hospitals are already experiencing shortages. The number of hospitalized patients differ from one place to another, 
-motivating dynamically allocate ventilators from a central stockpile.
-</pre>
+	   <h3 style="text-align:left;font-family:Arial;"> The Ventilator Shortage</h2>
+	   <pre>
+	   Mechanical ventilation is a major component of vital medical support for COVID-19 patients with severe acute respiratory 
+	   failure. Many hospitals in the U.S. and other countries have been already experiencing ventilator shortages. Our model 
+	   provides these hospitals with meaningful predictions to assist them in the dynamic allocation of ventilators from a central 
+	   stockpile.
+	   </pre>
 	   
-	   <h2 style="text-align:left;font-family:Arial;"> Technical details </h2>
-	   <pre>We provide an algorithm that predicts the number of Covid-19 patients who will start to require ventilators.  
-This algorithm is intended to be utilized by a large hospital or a group of coordinated hospitals (see documentation (link to be added ) for details).</pre>
+	   <h3 style="text-align:left;font-family:Arial;"> Our Model </h2>
+	   <pre>
+	   We developed an algorithm that predicts the number of Covid-19 patients who will start to require ventilators. This 
+	   algorithm is intended to be utilized by a large hospital or a group of coordinated hospitals 
+	   (see documentation (link to be added ) for details).
+	   </pre>
 	   
 	   <ol>
-  <li>Based on medical reports and articles with information about course of the COVID-19 we create a simulation model that is well calibrated
-  with New York City's Covid-19 data:
+ 	      <li>Based on medical reports and articles with information about course of the COVID-19 we create a simulation model 
+		  that is calibrated with New York City's Covid-19 data:
 
-  <img src="vents_nyc_sim_errorbars.png"; style="width:1000px"; alt="simulation results v nyc data">
-  </li>
-  <li> Next we propose the method that predicts the number of new patients who require ventilatory support
-on the next day just based on two numbers: number of hospitalized patients currently non-ventilated and 
-anticipated number of new hospital admissions on the next day.
+  		  <img src="vents_nyc_sim_errorbars.png"; style="width:600px"; alt="simulation results v nyc data">
+ 	     </li>
+		   
+  	     <li> We predict the number of new patients who require ventilatory support the next day based on two numbers: (1)number 
+		  of hospitalized patients not currently ventilated and (2)anticipated number of new hospital admissions on the next day.
 
- <img src="VentStarts.png"; style="width:800px"; alt="simulation results v nyc data">
- 
- 
- 
-  </li>
-  <li>We propose the policy a ventilator ordering and returning policy. In the simulation study under our ventilator order and return policy, no patients were denied of ventilation and there was no excessive
-inventory of ventilators kept at hospitals.
- <img src="FreeVent.png"; style="width:800px"; alt="simulation results v nyc data">
-</li>
-</ol> 
-
-	</div>
+ 		  <img src="VentStarts.png"; style="width:600px"; alt="simulation results v nyc data">
+ 	     </li>
+		   
+ 	     <li>We propose a ventilator ordering and returning policy. In the simulation study under our ventilator order 
+		 and return policy, no patients were denied of ventilation and there was no excessive
+		 inventory of ventilators kept at hospitals.
+		     
+		 <img src="FreeVent.png"; style="width:600px"; alt="simulation results v nyc data">
+	     </li>
+	</ol> 
+   </div>
 	   
     	<div id="contact"; class="tab-pane fade"> </div>
 	   
-   </div>
+   	</div>
    </div>
   </body>
 </html>
