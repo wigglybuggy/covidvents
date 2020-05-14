@@ -33,10 +33,11 @@
                 var p3 = 0.24;
                 var los_av = p1*los1+p2*los2+p3*los3;
                 var ans = Math.trunc((p2+p3)/los_av*on_vent + (p2/los2+p3/los3)*arrivals);
-                outputText = "Expected number of new ventilators: <strong>" + ans;
+                outputText = "Number of new patients who will require ventilator support tomorrow: <strong>" + ans;
             }
             // output the result (or errors)
             document.getElementById("output_text").innerHTML = outputText;
+			document.getElementById("output_text").style.fontSize = "18px";
         }
    </script>	
 </head>
@@ -56,13 +57,15 @@
 	   <h2 style="text-align:left;font-family:Arial;"> How many ventilators will be needed tomorrow? </h2>	 
 	   <br></br>
     	   <form name="input_form" action="javascript:validate();">
-           Number of patients in the hospital not on ventilators: <input type="text" name="aterm" size="5" required>
+           <font size="+1">Number of patients in the hospital not on ventilators:</font>  <input type="text" name="aterm" size="5" required>
 	   <br><br>
-           Anticipated number of admissions tomorrow: <input type="text" name="bterm" size="5" required>
+           <font size="+1">Anticipated number of admissions tomorrow:</font>  <input type="text" name="bterm" size="5" required>
    	   <br><br>
            <input type="submit" value="Calculate">
    	   </form>
    	   <p id="output_text"/>
+		
+		<br><br>
 		
 		<h3 style="text-align:left;font-family:Arial;"> Need help with estimating the number of admissions tomorrow?</h3>
 		   Our tool below predicts the number of admissions tomorrow. Please provide the number of daily admissions over the last 2 or more days
@@ -74,21 +77,16 @@
 	   <h3 style="text-align:left;font-family:Arial;"> The Ventilator Shortage</h3>
    <!-- Do not add text beyond this width of this border below, otherwise will trigger scroll bar                          -->
 	   <pre word-break: break-all; white-space: normal;>
-  
-  Mechanical ventilation is a major component of vital medical support for COVID-19 patients with severe acute respiratory 
-  failure. Many hospitals in the U.S. and other countries have been already experiencing ventilator shortages. Our model 
-  provides these hospitals with meaningful predictions to assist them in the dynamic allocation of ventilators from a central 
-  stockpile.
-	   </pre>
-	   
+ <p style="font-size:18px">  Mechanical ventilation is a major component of vital medical support for COVID-19 patients with severe acute
+  respiratory failure. Many hospitals in the U.S. and other countries have been already experiencing ventilator 
+  shortages. Our model provides these hospitals with meaningful predictions to assist them in the dynamic 
+  allocation of ventilators from a central stockpile.</p></pre>
 	   <h3 style="text-align:left;font-family:Arial;"> Our Model </h3>
   <!-- Do not add text beyond this width of this border below, otherwise will trigger scroll bar                          -->
 	   <pre word-break: break-all; white-space: normal;>
-  
-  We developed an algorithm that predicts the number of Covid-19 patients who will start to require ventilators. This 
-  algorithm is intended to be utilized by a large hospital or a group of coordinated hospitals (see documentation (link to be 
-  added) for details).
-	   </pre>
+ <p style="font-size:18px">  We developed an algorithm that predicts the number of Covid-19 patients who will start to require ventilators.
+  This algorithm is intended to be utilized by a large hospital or a group of coordinated hospitals (see 
+  documentation (link to be added) for details).</p></pre>
 	   
 	   <ol>
  	      <li>Based on medical reports and articles with information about course of the COVID-19 we create a simulation model 
@@ -99,14 +97,14 @@
   	     <li> We predict the number of new patients who require ventilatory support the next day based on two numbers: (1) number 
 		  of hospitalized patients not currently ventilated and (2) anticipated number of new hospital admissions on the next day.
 
- 		  <img src="VentStarts.png"; style="width:600px"; alt="simulation results v nyc data">
+ 		  <img src="VentStarts.png"; style="width:800px"; alt="simulation results v nyc data">
  	     </li>
 		   
  	     <li>We propose a ventilator ordering and returning policy. In the simulation study under our ventilator order 
 		 and return policy, no patients were denied of ventilation and there was no excessive
 		 inventory of ventilators kept at hospitals.
 		     
-		 <img src="FreeVent.png"; style="width:600px"; alt="simulation results v nyc data">
+		 <img src="FreeVent.png"; style="width:800px"; alt="simulation results v nyc data">
 	     </li>
 	</ol> 
    </div>
