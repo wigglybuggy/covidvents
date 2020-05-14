@@ -53,19 +53,22 @@
 		
    <div class="tab-content">
     	<div id="home"; class="tab-pane fade in active"> 
-	   <br></br>
-	   <h2 style="text-align:left;font-family:Arial;"> How many ventilators will be needed tomorrow? </h2>	 
+	   <h2 style="text-align:left;font-family:Arial;"> How many ventilators will be needed tomorrow? </h2>	
+
+		Our algorithm below will predict the number of new patients with COVID-19 that will require a ventilator 
+		tomorrow based on 2 easily accessible inputs. To learn more about how our algorithm works and why you can 
+		trust it, click here (link to model overview)	   
 	   <br></br>
     	   <form name="input_form" action="javascript:validate();">
-           <font size="+1">Number of patients in the hospital not on ventilators:</font>  <input type="text" name="aterm" size="5" required>
+           <font size="+1">Current number of patients with COVID-19 in your hospital(s) not on ventilators:</font>  <input type="text" name="aterm" size="5" required>
 	   <br><br>
-           <font size="+1">Anticipated number of admissions tomorrow:</font>  <input type="text" name="bterm" size="5" required>
+           <font size="+1">Anticipated number of hospitalized patients with COVID-19 tomorrow:</font>  <input type="text" name="bterm" size="5" required>
    	   <br><br>
            <input type="submit" value="Calculate">
    	   </form>
    	   <p id="output_text"/>
 		
-		<br><br>
+		<hr width="170%"> 
 		
 		<h3 style="text-align:left;font-family:Arial;"> Need help with estimating the number of admissions tomorrow?</h3>
 		   Our tool below predicts the number of admissions tomorrow. Please provide the number of daily admissions over the last 2 or more days
